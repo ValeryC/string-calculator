@@ -1,7 +1,18 @@
+const reducer = (a,b) =>{
+  return a + b
+} 
+
 const add = numbers => {
-  return -1
+
+  const arrNumbers = numbers
+    .split(',')
+    .map(Number)   
+    .reduce(reducer)
+
+  return arrNumbers
 }
 
 module.exports = {
   add,
 }
+
